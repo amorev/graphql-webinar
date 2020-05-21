@@ -9,6 +9,7 @@ const {
 
 const PostType = require('./post')
 const AuthorType = require('./author')
+const axios = require('axios')
 
 module.exports = new GraphQLObjectType({
   name: 'ExampleAppRootSchema',
@@ -18,15 +19,17 @@ module.exports = new GraphQLObjectType({
       authors: {
         type: new GraphQLList(AuthorType),
         description: 'Authors list',
-        resolve: function () {
-          return require('../data/mock').authors
+        resolve: async function () {
+          let { data } = await axios('https://jsonplaceholder.typicode.com/users')
+          return data
         }
       },
       posts: {
         type: new GraphQLList(PostType),
         description: 'Posts list',
-        resolve: function () {
-          return require('../data/mock').posts
+        resolve: async function () {
+          let { data } = await axios('https://jsonplaceholder.typicode.com/posts')
+          return data
         }
       }
     })

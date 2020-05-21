@@ -4,7 +4,7 @@ const {
   GraphQLNonNull,
 } = require('graphql')
 const AuthorType = require('./author')
-const { authors } = require('../data/mock')
+const axios = require('axios')
 
 module.exports = new GraphQLObjectType({
   name: 'Post',
@@ -12,11 +12,11 @@ module.exports = new GraphQLObjectType({
   fields: () => ({
     id: { type: new GraphQLNonNull(GraphQLString) },
     title: { type: new GraphQLNonNull(GraphQLString) },
-    author_id: { type: new GraphQLNonNull(GraphQLString) },
+    userId: { type: new GraphQLNonNull(GraphQLString) },
     author: {
       type: AuthorType,
       resolve: function (post) {
-        return authors.find(e => e.id === post.author_id)
+        return axios(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
       }
     },
     body: { type: GraphQLString },
