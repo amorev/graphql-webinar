@@ -1,3 +1,5 @@
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
 const {
   graphql,
   GraphQLSchema
@@ -6,6 +8,13 @@ const {
 const query = require('./types/query/root')
 const schema = new GraphQLSchema({ query })
 
-graphql(schema, '{ posts {id, title, author { id, name }}, authors {id} }').then((response) => {
-  console.log(JSON.stringify(response))
-})
+const app = express();
+app.use('/', graphqlHTTP({
+  schema: schema,
+  graphiql: true
+}));
+
+const port = 3000
+
+app.listen(port);
+console.log('GraphQL API server running at localhost: ' + port);

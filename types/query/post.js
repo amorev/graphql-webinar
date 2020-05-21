@@ -15,8 +15,9 @@ module.exports = new GraphQLObjectType({
     userId: { type: new GraphQLNonNull(GraphQLString) },
     author: {
       type: AuthorType,
-      resolve: function (post) {
-        return axios(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
+      resolve: async function (post) {
+        let url = `https://jsonplaceholder.typicode.com/users/${post.userId}`
+        return (await axios(url)).data
       }
     },
     body: { type: GraphQLString },
