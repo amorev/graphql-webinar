@@ -20,33 +20,34 @@ node index.js
 
 ## Что в данном примере происходит
 
-Мы запускаем Hello World на GraphQL самым простым путем
+Ситуация заметно усложнилась:) Теперь мы используем встроенные в механизм GraphQL системы построения схемы с вложенным полями и запросами. 
 
-```bash
-node index.js
-{
-  data: [Object: null prototype] {
-    hello: 'Hello world!',
-    bye: 'Bye world',
-    talk: 'Talk: Anton'
-  }
-}
+В данном примере мы имеем только сущность "Статья"
+
+```javascript
+const PostType = new GraphQLObjectType({
+  name: 'Post',
+  description: 'This represent a Post',
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLString) },
+    title: { type: new GraphQLNonNull(GraphQLString) },
+    body: { type: GraphQLString },
+  })
+})
+``` 
+
+О чем говорит данный кусок кода:
+* у нас есть сущность PostType которую мы потом можем подключать куда нужно
+* у это сущности следующие поля:
+    - id. Идентификатор статьи. Primary Key или просто порядковый номер. Обратите внимание на обертку GraphQLNonNull, которая говорит нам о том, что это поле обязательно не пустое
+    - title. Название статьи. Строка и тоже GraphQLNonNull
+    
+Впоследствии при запросе к серверу мы можем указать нужные нам поля:
+```
+{ posts {id, title} }
+```
+И в ответ получить ровно эти поля у списка сущностей posts
 
 ```
-
-Теперь ситуация шагнула еще вперед. У нас добавилось поле talk. Запрос трансформировался до
+{"data":{"posts":[{"id":"123","title":"Post about GraphQL"}]}}
 ```
-{ hello, bye, talk(name:"Anton") }
-```
-
-Появилось поле talk с аргументом name. Переданные аргумент передается в резолвер поле и мы получаем ответ Talk: Anton.
-
-Обратите внимание на то, как это поле указано в схеме:
-```
-talk (name: String!): String
-```
-String! означает, что этот аргумент обязательный. Если это поле не передать, то обработчик вернет ошибку 
-```
-Field "talk" argument "name" of type "String!" is required, but it was not provided.
-```
-Таким образом мы получаем простую и удобную валидацию на уровне схемы GraphQL

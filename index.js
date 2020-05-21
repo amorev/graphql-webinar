@@ -1,28 +1,46 @@
-var { graphql, buildSchema } = require('graphql')
+const {
+  graphql,
+  GraphQLString,
+  GraphQLList,
+  GraphQLObjectType,
+  GraphQLNonNull,
+  GraphQLSchema
+} = require('graphql')
 
-// Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
-  type Query {
-    hello: String,
-    bye: String,
-    talk (name: String!): String
+const PostType = new GraphQLObjectType({
+  name: 'Post',
+  description: 'This represent a Post',
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLString) },
+    title: { type: new GraphQLNonNull(GraphQLString) },
+    body: { type: GraphQLString },
+  })
+})
+
+const query = new GraphQLObjectType({
+  name: 'ExampleAppRootSchema',
+  description: 'Introducing complex schemas',
+  fields: () => {
+    return ({
+      posts: {
+        type: new GraphQLList(PostType),
+        description: 'Posts list',
+        resolve: function () {
+          return [
+            {
+              id: '123',
+              title: 'Post about GraphQL',
+              body: 'Awesome text about GraphQL'
+            }
+          ]
+        }
+      }
+    })
   }
-`)
+})
 
-// The root provides a resolver function for each API endpoint
-var root = {
-  hello: () => {
-    return 'Hello world!'
-  },
-  bye: () => {
-    return 'Bye world'
-  },
-  talk: (args) => {
-    return 'Talk: ' + args.name
-  }
-}
+const schema = new GraphQLSchema({ query })
 
-// Run the GraphQL query '{ hello }' and print out the response
-graphql(schema, '{ hello, bye, talk }', root).then((response) => {
-  console.log(response)
+graphql(schema, '{ posts {id, title} }').then((response) => {
+  console.log(JSON.stringify(response))
 })
