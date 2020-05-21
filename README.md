@@ -24,7 +24,9 @@ node index.js
 
 ```bash
 node index.js
-{ data: [Object: null prototype] { hello: 'Hello world!' } }
+{
+  data: [Object: null prototype] { hello: 'Hello world!', bye: 'Bye world' }
+}
 ```
 
-Мы запрашиваем поле hello, которое определено в резолвере как "Верни строку Hello World!". Если мы это поле не запросим - нам оно не придет
+Рядом с полем hello мы добавили поле bye. Скрипт с нами "прощается". Напоминаю, что мы имеем право выбирать поле или не выбирать. На что скрипт отдает только то, что мы запросили.
