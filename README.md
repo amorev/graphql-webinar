@@ -25,8 +25,28 @@ node index.js
 ```bash
 node index.js
 {
-  data: [Object: null prototype] { hello: 'Hello world!', bye: 'Bye world' }
+  data: [Object: null prototype] {
+    hello: 'Hello world!',
+    bye: 'Bye world',
+    talk: 'Talk: Anton'
+  }
 }
+
 ```
 
-Рядом с полем hello мы добавили поле bye. Скрипт с нами "прощается". Напоминаю, что мы имеем право выбирать поле или не выбирать. На что скрипт отдает только то, что мы запросили.
+Теперь ситуация шагнула еще вперед. У нас добавилось поле talk. Запрос трансформировался до
+```
+{ hello, bye, talk(name:"Anton") }
+```
+
+Появилось поле talk с аргументом name. Переданные аргумент передается в резолвер поле и мы получаем ответ Talk: Anton.
+
+Обратите внимание на то, как это поле указано в схеме:
+```
+talk (name: String!): String
+```
+String! означает, что этот аргумент обязательный. Если это поле не передать, то обработчик вернет ошибку 
+```
+Field "talk" argument "name" of type "String!" is required, but it was not provided.
+```
+Таким образом мы получаем простую и удобную валидацию на уровне схемы GraphQL
