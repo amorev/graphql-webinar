@@ -20,34 +20,31 @@ node index.js
 
 ## Что в данном примере происходит
 
-Ситуация заметно усложнилась:) Теперь мы используем встроенные в механизм GraphQL системы построения схемы с вложенным полями и запросами. 
-
-В данном примере мы имеем только сущность "Статья"
+Мы не стоим на месте - мы добавили новую сущность "Автор".
 
 ```javascript
-const PostType = new GraphQLObjectType({
-  name: 'Post',
-  description: 'This represent a Post',
+const AuthorType = new GraphQLObjectType({
+  name: 'Author',
+  description: 'This represent an author',
   fields: () => ({
     id: { type: new GraphQLNonNull(GraphQLString) },
-    title: { type: new GraphQLNonNull(GraphQLString) },
-    body: { type: GraphQLString },
+    name: { type: new GraphQLNonNull(GraphQLString) },
   })
 })
-``` 
+```
 
-О чем говорит данный кусок кода:
-* у нас есть сущность PostType которую мы потом можем подключать куда нужно
-* у это сущности следующие поля:
-    - id. Идентификатор статьи. Primary Key или просто порядковый номер. Обратите внимание на обертку GraphQLNonNull, которая говорит нам о том, что это поле обязательно не пустое
-    - title. Название статьи. Строка и тоже GraphQLNonNull
-    
-Впоследствии при запросе к серверу мы можем указать нужные нам поля:
-```
-{ posts {id, title} }
-```
-И в ответ получить ровно эти поля у списка сущностей posts
+По аналогии с постом, у этой сущности поля id (идентификатор) и name.
+
+Теперь, чтобы получить вместе с постами еще списко авторов мы расширяем наш запрос:
 
 ```
-{"data":{"posts":[{"id":"123","title":"Post about GraphQL"}]}}
+{ posts {id, title}, authors {id} }
 ```
+
+Теперь у нас, рядом с постами, есть еще и посты. Наш скрипт отдает следующий ответ:
+
+```json
+{"data":{"posts":[{"id":"123","title":"Post about GraphQL"}],"authors":[{"id":"1"}]}}
+```
+
+В ответе есть и посты и авторы - как мы и хотели и все это в рамках одного запроса:)
