@@ -9,7 +9,8 @@ module.exports = {
     {
       id: '123',
       title: 'Post about GraphQL',
-      body: 'Awesome text about GraphQL'
+      body: 'Awesome text about GraphQL',
+      author_id: '1'
     }
   ]
 }

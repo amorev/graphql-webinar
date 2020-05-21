@@ -6,6 +6,6 @@ const {
 const query = require('./types/query/root')
 const schema = new GraphQLSchema({ query })
 
-graphql(schema, '{ posts {id, title}, authors {id} }').then((response) => {
+graphql(schema, '{ posts {id, title, author { id, name }}, authors {id} }').then((response) => {
   console.log(JSON.stringify(response))
 })
