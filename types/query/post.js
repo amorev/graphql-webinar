@@ -6,6 +6,11 @@ const {
 const AuthorType = require('./author')
 const axios = require('axios')
 
+const DataLoader = require('dataloader')
+const UsersLoader = new DataLoader((userIds) => {
+  return axios(`https://jsonplaceholder.typicode.com/users`).then(data => data.data.filter(user => userIds.includes(user.id)))
+})
+
 module.exports = new GraphQLObjectType({
   name: 'Post',
   description: 'This represent a Post',
@@ -16,8 +21,7 @@ module.exports = new GraphQLObjectType({
     author: {
       type: AuthorType,
       resolve: async function (post) {
-        let url = `https://jsonplaceholder.typicode.com/users/${post.userId}`
-        return (await axios(url)).data
+        return UsersLoader.load(post.userId)
       }
     },
     body: { type: GraphQLString },
