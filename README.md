@@ -20,24 +20,18 @@ node index.js
 
 ## Что в данном примере происходит
 
-В данном шаге мы решили проблему N+1. Для ее решения мы используем dataloader.
+Теперь мы добавили ограничение на глубину запроса - чтобы ушлые фронтэндере не делали запросы с бесконечной вложенностью:)
 
-В резолвере вместо реальных данных мы возвращаем dataloader и передаем ему id нужной сущности
-
-```javascript
-async function (post) {
-  return UsersLoader.load(post.userId)
-}
-```
-
-Сам же лоадер определяется следующим образом
+Подключается довольно просто:
 
 ```javascript
-const DataLoader = require('dataloader')
-const UsersLoader = new DataLoader((userIds) => {
-  return axios(`https://jsonplaceholder.typicode.com/users`).then(data => data.data.filter(user => userIds.includes(user.id)))
-})
+const depthLimit = require('graphql-depth-limit')
+
+app.use('/', graphqlHTTP({
+  schema: schema,
+  validationRules: [depthLimit(2)],
+  graphiql: true
+}))
 ```
 
-В данном примере мы, конечно, получаем избыточные данные с API, т.к. у нашего API нет функционала фильтрации. Поэтому мы фильтруем уже на своей стороне по id.
-Суть в том, что в данный лоадер приходит запрос тогда, когда уже все поля с этим лоадером собраны и можно сделать разовый один запрос к внешнему сервису и разобрать полученные данные и передать их в нужные резолверы
+Теперь любые запросы глубиной выше 2 будут блокироваться сервером
