@@ -1,0 +1,12 @@
+{
+    "name": "amorev/graphql-webinar",
+    "authors": [
+        {
+            "name": "Anton Morev",
+            "email": "shikto@mail.ru"
+        }
+    ],
+    "require": {
+        "webonyx/graphql-php": "^0.13.8"
+    }
+}
