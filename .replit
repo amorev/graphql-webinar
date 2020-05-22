@@ -1,0 +1,2 @@
+language = "php"
+run = "php server.php"
