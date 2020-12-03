@@ -1,3 +1,4 @@
+
 const {
   graphql,
   GraphQLString,
@@ -6,6 +7,8 @@ const {
   GraphQLNonNull,
   GraphQLSchema
 } = require('graphql')
+
+const connection = require('./connection');
 
 const cities = [
   {
@@ -177,7 +180,19 @@ const query = new GraphQLObjectType({
   })
 })
 
-const schema = new GraphQLSchema({ query })
+const subscription = new GraphQLObjectType({
+  name: "Subscription",
+  fields: () => ({
+    test: {
+      type: PersonType,
+        resolve: () => {
+
+      }
+    }
+  })
+})
+
+const schema = new GraphQLSchema({ query, subscription })
 
 var graphqlHTTP = require('express-graphql')
 var express = require('express')
@@ -188,3 +203,14 @@ app.use('/', graphqlHTTP.graphqlHTTP({
   graphiql: true,
 }))
 app.listen(3000)
+
+const text = 'select * from user'
+const values = []
+connection
+  .query(text, values)
+  .then(res => {
+    console.log(res.rows[0])
+    // { name: 'brianc', email: 'brian.m.carlson@gmail.com' }
+    connection.end()
+  })
+  .catch(e => console.error(e.stack))
