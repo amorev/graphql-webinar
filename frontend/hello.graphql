@@ -1,0 +1,11 @@
+query  {
+    books (id: 1) {
+        $cameAuthor = author
+        id
+        yearInfo {
+
+        }
+        year
+    }
+    author (id: $cameAuthor)
+}

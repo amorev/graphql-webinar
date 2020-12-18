@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="40623420-2032-4ced-8da3-31b5f5377fe7" name="Default Changelist" comment="Connect to real data">
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/connector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/all.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="GraphQL File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="node-step4" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1hVcydoWFfUPVkFHu1ih0WGW0Xi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request&#10;JavaScript" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+    <property name="vuejs.nuxt.types-notification-shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\projects\edu\otus\graphql-webinar\node_modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\projects\edu\otus\graphql-webinar\node_modules" />
+      <recent name="D:\work\projects\edu\otus\graphql-webinar" />
+      <recent name="D:\work\projects\edu\otus\graphql-webinar\server" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="server/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40623420-2032-4ced-8da3-31b5f5377fe7" name="Default Changelist" comment="" />
+      <created>1600099956866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600099956866</updated>
+      <workItem from="1600099958379" duration="646000" />
+      <workItem from="1600101058345" duration="8091000" />
+      <workItem from="1600259734027" duration="9887000" />
+      <workItem from="1606841281879" duration="7191000" />
+      <workItem from="1607012542686" duration="9158000" />
+      <workItem from="1607080575349" duration="622000" />
+      <workItem from="1607611971246" duration="1233000" />
+      <workItem from="1607700544560" duration="1457000" />
+      <workItem from="1607782429798" duration="599000" />
+      <workItem from="1608301553973" duration="3883000" />
+      <workItem from="1608310377917" duration="43000" />
+      <workItem from="1608310433445" duration="1770000" />
+    </task>
+    <task id="LOCAL-00001" summary="Apollo simple">
+      <created>1600100524211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600100524211</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Not forget to explain hot to get Authors field City">
+      <created>1606846877122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606846877122</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Family Tree with country and president">
+      <created>1606848128757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606848128757</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add PG">
+      <created>1607014565572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607014565572</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP">
+      <created>1607017265913</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607017265913</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Connect to real data">
+      <created>1608301596201</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608301596201</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="D:\work\soft\cmder\vendor\git-for-windows\bin\bash.exe" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Apollo simple" />
+    <MESSAGE value="Not forget to explain hot to get Authors field City" />
+    <MESSAGE value="Family Tree with country and presidetn" />
+    <MESSAGE value="Family Tree with country and president" />
+    <MESSAGE value="Add PG" />
+    <MESSAGE value="WIP" />
+    <MESSAGE value="Connect to real data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect to real data" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607013279574">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607013279574" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600107850689" />
+    <state x="709" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600100554762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="453" y="261" key="#com.intellij.fileTypes.FileTypeChooser.inPresentationMode" timestamp="1600105414979">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="453" y="261" key="#com.intellij.fileTypes.FileTypeChooser.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600105414979" />
+    <state x="709" y="321" key="#com.intellij.fileTypes.FileTypeChooser/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600100554762" />
+    <state x="810" y="523" key="#com.intellij.ide.util.TreeDirectoryChooserDialog" timestamp="1608310010371">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="810" y="523" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1608310010371" />
+    <state x="92" y="103" width="1736" height="955" key="DiffContextDialog" timestamp="1607704643831">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog.inPresentationMode" timestamp="1606844192789">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1606844192789" />
+    <state x="92" y="103" width="1736" height="955" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607704643831" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600361289046" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1600107849183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600107849183" />
+    <state width="1877" height="338" key="GridCell.Tab.0.bottom" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.0.bottom/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.0.center" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.0.center/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.0.left" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.0.left/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.0.right" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.0.right/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.center/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.left/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.right/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.2.center" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.center/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.2.left" timestamp="1600164065171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.left/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065171" />
+    <state width="1877" height="338" key="GridCell.Tab.2.right" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.right/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.3.bottom" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.3.bottom/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.3.center" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.3.center/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.3.left" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.3.left/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state width="1877" height="338" key="GridCell.Tab.3.right" timestamp="1600164065172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.3.right/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600164065172" />
+    <state x="461" y="183" key="SettingsEditor" timestamp="1608310598670">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor.inPresentationMode" timestamp="1606846701798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1606846701798" />
+    <state x="461" y="183" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1608310598670" />
+    <state x="461" y="164" key="SettingsEditor/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600100598250" />
+    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1600361231465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="418" y="0" width="1113" height="1036" key="StructurePopup.inPresentationMode" timestamp="1600362769650">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="418" y="0" width="1113" height="1036" key="StructurePopup.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600362769650" />
+    <state x="681" y="261" width="540" height="524" key="StructurePopup/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600361231465" />
+    <state width="863" height="791" key="SwitcherDM.inPresentationMode" timestamp="1600366248438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="863" height="791" key="SwitcherDM.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600366248438" />
+    <state x="552" y="281" key="Vcs.Push.Dialog.v2" timestamp="1608301597851">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="152" y="0" key="Vcs.Push.Dialog.v2.inPresentationMode" timestamp="1607015780398">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="152" y="0" key="Vcs.Push.Dialog.v2.inPresentationMode/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607015780398" />
+    <state x="152" y="0" key="Vcs.Push.Dialog.v2.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1606846879518" />
+    <state x="552" y="281" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1608301597851" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1606848131710" />
+    <state x="858" y="435" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1607013272829">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="858" y="435" key="com.intellij.database.actions.DdlActions$CreateObject$1/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607013272829" />
+    <state x="766" y="391" width="608" height="451" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1.inPresentationMode" timestamp="1607016275222">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="766" y="391" width="608" height="451" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1.inPresentationMode/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607016275222" />
+    <state x="977" y="224" width="552" height="735" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607017676991">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="654" y="160" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog.inPresentationMode" timestamp="1607016364811">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="654" y="160" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog.inPresentationMode/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607016364811" />
+    <state x="977" y="224" width="552" height="735" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607017676991" />
+    <state x="142" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog.inPresentationMode" timestamp="1600363898264">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="142" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600363898264" />
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600100574679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600100574679" />
+    <state x="-1268" y="102" width="1296" height="719" key="dock-window-1" timestamp="1600362505060">
+      <screen x="-1280" y="3" width="1280" height="984" />
+    </state>
+    <state x="-1321" y="100" width="1230" height="719" key="dock-window-1.inPresentationMode" timestamp="1600362592847">
+      <screen x="-1280" y="3" width="1280" height="984" />
+    </state>
+    <state x="-1321" y="100" width="1230" height="719" key="dock-window-1.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600362592847" />
+    <state x="-1268" y="102" width="1296" height="719" key="dock-window-1/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600362505060" />
+    <state x="616" y="270" key="run.anything.popup" timestamp="1607017689114">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="616" y="270" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1160/-1280.55.1280.984@0.0.1920.1160" timestamp="1607017689114" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606847816142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="286" y="-2" width="1344" height="2556" key="search.everywhere.popup.inPresentationMode" timestamp="1600104354962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="286" y="-2" width="1344" height="2556" key="search.everywhere.popup.inPresentationMode/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1600104354962" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.3.1920.1040/-1280.3.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1606847816142" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/index.js</url>
+          <line>74</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="graphql-webinar" type="b2602c69:ProjectViewProjectNode" />
+        <item name="graphql-webinar" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>
