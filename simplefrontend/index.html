@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var query = `query GetBooks ($year: Int!) {
+  books (year: $year) {
+    author
+    year
+  }
+}`
+        fetch('http://localhost:4000/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            query,
+            variables: {
+              year: 2019
+            }
+          })
+        })
+        .then(res => res.json())
+        .then(info => {
+          console.log(info.data)
+          document.getElementById('info').innerHTML = JSON.stringify(info.data)
+        })
+        function addBook() {
+          var mutation =
+            `mutation {
+  books (
+    year: 2020
+    author:"test",
+    title:"test 123"
+  )
+}`
+          fetch('http://localhost:4000/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+              query: mutation,
+              variables: {
+                year: 2019,
+                author: 'Anton Morev',
+                title: 'Beautiful GraphQL in real life (not beautiful, forget about this)'
+              }
+            })
+          })
+        }
+        // var socket = new WebSocket('ws://localhost:4000/graphql')
+        // socket.onopen = function (event) {
+        //   socket.send('{"type":"connection_init","payload":{}}');
+        //   socket.send('{"id":"2","type":"start","payload":{"variables":{},"extensions":{},"operationName":null,"query":"subscription {\\n  newBook {\\n    title\\n  }\\n}\\n"}}');
+        // };
+        // socket.onmessage = function (event) {
+        //   console.log(event.data);
+        // }
+    </script>
+</head>
+<body>
+<button onclick="addBook()">AddBook</button>
+
+<div id="info">
+</div>
+</body>
+</html>

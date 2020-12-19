@@ -7,10 +7,11 @@ schema {
 type Book {
     author: String
     title: String
+    year: Int
 }
 
 type Query {
-    books: [Book]
+    books(year: Int): [Book]
 }
 
 enum CacheControlScope {
