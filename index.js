@@ -9,6 +9,30 @@ const {
 
 const express = require('express')
 const { graphqlHTTP } = require('express-graphql')
+let posts = [
+  {
+    id: "123",
+    title: "title1",
+    authorId: "123",
+    body: "body1"
+  },
+  {
+    id: "1232",
+    authorId: "1232",
+    title: "title2",
+    body: "body2"
+  }
+]
+let authors = [
+  {
+    id: "123",
+    name: "title1"
+  },
+  {
+    id: "1232",
+    name: "title2"
+  }
+]
 
 const PostType = new GraphQLObjectType({
   "name": "Post",
@@ -22,6 +46,13 @@ const PostType = new GraphQLObjectType({
     body: {
       type: GraphQLString
     },
+    author: {
+      type: AuthorType,
+      resolve: (root) => {
+        let find = authors.find(e => e.id === root.authorId)
+        return find
+      }
+    }
   })
 })
 
@@ -44,33 +75,15 @@ const query = new GraphQLObjectType({
       posts: {
         type: new GraphQLList(PostType),
         resolve: function () {
-          return [
-            {
-              id: "123",
-              title: "title1",
-              body: "body1"
-            },
-            {
-              id: "1232",
-              title: "title2",
-              body: "body2"
-            }
-          ]
+
+          return posts
         }
       },
       authors: {
         type: new GraphQLList(AuthorType),
         resolve: function () {
-          return [
-            {
-              id: "123",
-              name: "title1"
-            },
-            {
-              id: "1232",
-              name: "title2"
-            }
-          ]
+
+          return authors
         }
       }
     }
