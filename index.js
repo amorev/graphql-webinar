@@ -7,6 +7,9 @@ const {
   GraphQLSchema
 } = require('graphql')
 
+const express = require('express')
+const { graphqlHTTP } = require('express-graphql')
+
 const PostType = new GraphQLObjectType({
   "name": "Post",
   fields: () => ({
@@ -78,15 +81,6 @@ const schem = new GraphQLSchema({
   query
 })
 
-graphql(schem, '{ posts { id, title, body }, authors { id, name } }').then(r => {
-  console.log(JSON.stringify(r))
-})
-
-/*
-type Post {
-  id: String!
-}
-type Query {
-  posts: [PostType]
-}
- */
+const app = express();
+app.use('/', graphqlHTTP({ schema: schem, graphiql: true }))
+app.listen(5000)
