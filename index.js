@@ -3,7 +3,8 @@ const { graphql, buildSchema } = require('graphql')
 const schem = buildSchema(`
   type Query {
     hello: String,
-    bye: String
+    bye: String,
+    greet (name: String!): String
   }
 `)
 
@@ -13,9 +14,12 @@ const root = {
   },
   bye: () => {
     return 'Bye world!'
+  },
+  greet: (args) => {
+    return 'Hello, ' + args.name
   }
 }
 
-graphql(schem, '{ hello, bye }', root).then((r) => {
+graphql(schem, '{ hello, bye, greet(name: "Anton")}', root).then((r) => {
   console.log(r)
 })
