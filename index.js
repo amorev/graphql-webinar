@@ -1,6 +1,7 @@
 const {
   graphql,
   GraphQLString,
+  GraphQLInt,
   GraphQLList,
   GraphQLObjectType,
   GraphQLNonNull,
@@ -70,7 +71,7 @@ const AuthorType = new GraphQLObjectType({
   "name": "Author",
   fields: () => ({
     id: {
-      type: new GraphQLNonNull(GraphQLString)
+      type: new GraphQLNonNull(GraphQLInt)
     },
     name: {
       type: new GraphQLNonNull(GraphQLString)
@@ -104,6 +105,21 @@ const query = new GraphQLObjectType({
               const authors = res.rows
               console.log(authors)
               return authors;
+            })
+        }
+      },
+      author: {
+        type: AuthorType,
+        args: {
+            id:  {
+              type: GraphQLInt
+            }
+        },
+        resolve: function (root, args) {
+          console.log(args)
+          return client.query("SELECT * FROM authors where id = $1", [args.id])
+            .then(res => {
+              return res.rows[0]
             })
         }
       }
