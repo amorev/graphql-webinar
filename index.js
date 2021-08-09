@@ -16,6 +16,17 @@ const client = new Client({
   port: 5432,
 })
 
+const DataLoader = require('dataloader')
+const AuthorLoader = new DataLoader((authorIds) => {
+  let s = "SELECT * from authors where id in (" + authorIds.join(',') +")"
+  console.log('make query:', ++queriesCount)
+  return client.query(s)
+    .then(r => r.rows).then(authors => {
+      console.log(authors)
+      return authors
+    })
+})
+
 client.connect()
 
 const express = require('express')
@@ -47,7 +58,7 @@ let posts = [
   },
   {
     id: "1232",
-    authorId: 2,
+    authorId: 1,
     title: "title2",
     body: "body2"
   }
@@ -86,7 +97,7 @@ const PostType = new GraphQLObjectType({
     author: {
       type: AuthorType,
       resolve: (root) => {
-        return getAuthor(root.authorId)
+        return AuthorLoader.load(root.authorId)
       }
     }
   })
