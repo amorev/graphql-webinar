@@ -24,12 +24,30 @@ let posts = [
   {
     id: "123",
     title: "title1",
-    authorId: "123",
+    authorId: 1,
     body: "body1"
   },
   {
     id: "1232",
-    authorId: "1232",
+    authorId: 2,
+    title: "title2",
+    body: "body2"
+  },
+  {
+    id: "1232",
+    authorId: 2,
+    title: "title2",
+    body: "body2"
+  },
+  {
+    id: "1232",
+    authorId: 2,
+    title: "title2",
+    body: "body2"
+  },
+  {
+    id: "1232",
+    authorId: 2,
     title: "title2",
     body: "body2"
   }
@@ -44,6 +62,14 @@ let authors = [
     name: "title2"
   }
 ]
+let queriesCount = 0;
+function getAuthor (id) {
+  console.log('make query:', ++queriesCount)
+  return client.query("SELECT * FROM authors where id = $1", [id])
+    .then(res => {
+      return res.rows[0]
+    })
+}
 
 const PostType = new GraphQLObjectType({
   "name": "Post",
@@ -60,8 +86,7 @@ const PostType = new GraphQLObjectType({
     author: {
       type: AuthorType,
       resolve: (root) => {
-        let find = authors.find(e => e.id === root.authorId)
-        return find
+        return getAuthor(root.authorId)
       }
     }
   })
@@ -93,13 +118,14 @@ const query = new GraphQLObjectType({
       posts: {
         type: new GraphQLList(PostType),
         resolve: function () {
-
+          console.log('make query:', ++queriesCount)
           return posts
         }
       },
       authors: {
         type: new GraphQLList(AuthorType),
         resolve: function () {
+          console.log('make query:', ++queriesCount)
           return client.query('SELECT * from authors')
             .then(res => {
               const authors = res.rows
@@ -116,11 +142,7 @@ const query = new GraphQLObjectType({
             }
         },
         resolve: function (root, args) {
-          console.log(args)
-          return client.query("SELECT * FROM authors where id = $1", [args.id])
-            .then(res => {
-              return res.rows[0]
-            })
+          return getAuthor(args.id)
         }
       }
     }
