@@ -64,6 +64,13 @@ const AuthorType = new GraphQLObjectType({
     },
     name: {
       type: new GraphQLNonNull(GraphQLString)
+    },
+    posts: {
+      type: new GraphQLList(PostType),
+      resolve: (root) => {
+        const authorId = root.id
+        return posts.filter(e => e.authorId === authorId)
+      }
     }
   })
 })
