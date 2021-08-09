@@ -6,6 +6,16 @@ const {
   GraphQLNonNull,
   GraphQLSchema
 } = require('graphql')
+const { Client } = require('pg')
+const client = new Client({
+  user: 'root',
+  host: process.env.PG_HOST,
+  database: 'GQL_Lesson',
+  password: process.env.PG_PASS,
+  port: 5432,
+})
+
+client.connect()
 
 const express = require('express')
 const { graphqlHTTP } = require('express-graphql')
@@ -89,8 +99,12 @@ const query = new GraphQLObjectType({
       authors: {
         type: new GraphQLList(AuthorType),
         resolve: function () {
-
-          return authors
+          return client.query('SELECT * from authors')
+            .then(res => {
+              const authors = res.rows
+              console.log(authors)
+              return authors;
+            })
         }
       }
     }
