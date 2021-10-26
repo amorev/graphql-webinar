@@ -18,6 +18,14 @@ const PostType = new GraphQLObjectType({
   })
 })
 
+const AuthorType = new GraphQLObjectType({
+  name: "Author",
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLString) },
+    name: { type: new GraphQLNonNull(GraphQLString) },
+  })
+})
+
 const query = new GraphQLObjectType({
   name: "Root_Schema",
   fields: () => ({
@@ -32,6 +40,17 @@ const query = new GraphQLObjectType({
           }
         ]
       }
+    },
+    authors: {
+      type: new GraphQLList(AuthorType),
+      resolve: () => {
+        return [
+          {
+            id: "123",
+            name: "Author name"
+          }
+        ]
+      }
     }
   })
 })
@@ -43,6 +62,6 @@ const query = new GraphQLObjectType({
 
 var schema = new GraphQLSchema({ query })
 
-gql.graphql(schema, '{ posts { id, title, body} }', root).then((response) => {
+gql.graphql(schema, '{ posts { id, title, body}, authors { id, name } }', root).then((response) => {
   console.log(JSON.stringify(response))
 })
