@@ -1,6 +1,9 @@
 const {
   GraphQLList,
   GraphQLObjectType,
+  GraphQLInputObjectType,
+  GraphQLNonNull,
+  GraphQLString
 } = require('graphql')
 const PostType = require('./post')
 const AuthorType = require('./author')
@@ -26,6 +29,16 @@ module.exports = new GraphQLObjectType({
       type: new GraphQLList(UserType),
       resolve: () => {
         return axios.get('https://jsonplaceholder.typicode.com/users')
+          .then(r => r.data)
+      }
+    },
+    user: {
+      type: UserType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve: (root, args) => {
+        return axios.get('https://jsonplaceholder.typicode.com/users/'+args.id)
           .then(r => r.data)
       }
     }
