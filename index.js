@@ -1,25 +1,48 @@
 var gql = require('graphql')
+const {
+  graphql,
+  GraphQLString,
+  GraphQLList,
+  GraphQLObjectType,
+  GraphQLNonNull,
+  GraphQLSchema
+} = require('graphql')
 
-var schema = gql.buildSchema(`
-  type Query {
-    hello: String,
-    bye: String,
-    talk (name: String!): String
-  }
-`);
+const PostType = new GraphQLObjectType({
+  name: "Post",
+  description: "This is post object",
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLString) },
+    title: { type: new GraphQLNonNull(GraphQLString) },
+    body: { type: GraphQLString }
+  })
+})
 
-var root = {
-  hello: () => {
-    return 'Hello World!'
-  },
-  bye: () => {
-    return 'Bye` World!'
-  },
-  talk: (args) => {
-    return 'Talk: ' + args.name
-  }
-}
+const query = new GraphQLObjectType({
+  name: "Root_Schema",
+  fields: () => ({
+    posts: {
+      type: new GraphQLList(PostType),
+      resolve: () => {
+        return [
+          {
+            id: "123",
+            title: "Post title",
+            description: "Post Description"
+          }
+        ]
+      }
+    }
+  })
+})
 
-gql.graphql(schema, '{ hello, bye, talk(name: "Anton") }', root).then((response) => {
-  console.log(response)
+
+
+
+
+
+var schema = new GraphQLSchema({ query })
+
+gql.graphql(schema, '{ posts { id, title} }', root).then((response) => {
+  console.log(JSON.stringify(response))
 })
