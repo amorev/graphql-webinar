@@ -28,7 +28,7 @@ const query = new GraphQLObjectType({
           {
             id: "123",
             title: "Post title",
-            description: "Post Description"
+            body: "Post Body"
           }
         ]
       }
@@ -43,6 +43,6 @@ const query = new GraphQLObjectType({
 
 var schema = new GraphQLSchema({ query })
 
-gql.graphql(schema, '{ posts { id, title} }', root).then((response) => {
+gql.graphql(schema, '{ posts { id, title, body} }', root).then((response) => {
   console.log(JSON.stringify(response))
 })
