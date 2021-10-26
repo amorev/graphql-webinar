@@ -5,6 +5,10 @@ const {
 } = require('graphql')
 const UserType = require('./user')
 const axios = require('axios')
+const DataLoader = require('dataloader')
+const UsersLoader = new DataLoader((userIds) => {
+  return axios(`https://jsonplaceholder.typicode.com/users`).then(d => d.data.filter(user => userIds.includes(user.id)))
+})
 var counter = 1;
 module.exports = new GraphQLObjectType({
   name: "Post",
@@ -16,9 +20,7 @@ module.exports = new GraphQLObjectType({
     user: {
       type: UserType,
       resolve: (root) => {
-        console.log(++counter)
-        return axios.get('https://jsonplaceholder.typicode.com/users/'+root.userId)
-          .then(r => r.data)
+        return UsersLoader.load(root.userId)
       }
     }
   })
