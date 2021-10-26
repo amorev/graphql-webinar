@@ -9,7 +9,8 @@ module.exports = {
     {
       id: "123",
       title: "Post title",
-      body: "Post Body"
+      body: "Post Body",
+      author_id: "123"
     }
   ]
 }
