@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/amorev/graphql-webinar#readme",
   "dependencies": {
+    "axios": "0.24.0",
     "dataloader": "2.0.0",
     "express": "4.17.1",
     "express-graphql": "0.12.0",
