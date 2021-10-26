@@ -1,4 +1,6 @@
 var gql = require('graphql')
+const express = require('express')
+const { graphqlHTTP } = require('express-graphql')
 const {
   graphql,
   GraphQLString,
@@ -55,13 +57,12 @@ const query = new GraphQLObjectType({
   })
 })
 
-
-
-
-
-
 var schema = new GraphQLSchema({ query })
 
-gql.graphql(schema, '{ posts { id, title, body}, authors { id, name } }', root).then((response) => {
-  console.log(JSON.stringify(response))
-})
+const app = express()
+app.use('/', graphqlHTTP({
+  schema,
+  graphiql: true
+}))
+
+app.listen(3000)
