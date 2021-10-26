@@ -16,7 +16,8 @@ module.exports = new GraphQLObjectType({
     posts: {
       type: new GraphQLList(PostType),
       resolve: () => {
-        return require('../mockdata').posts
+        return axios.get('https://jsonplaceholder.typicode.com/posts')
+          .then(r => r.data)
       }
     },
     authors: {

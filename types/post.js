@@ -3,8 +3,9 @@ const {
   GraphQLObjectType,
   GraphQLNonNull
 } = require('graphql')
-const AuthorType = require('./author')
-
+const UserType = require('./user')
+const axios = require('axios')
+var counter = 1;
 module.exports = new GraphQLObjectType({
   name: "Post",
   description: "This is post object",
@@ -12,10 +13,12 @@ module.exports = new GraphQLObjectType({
     id: { type: new GraphQLNonNull(GraphQLString) },
     title: { type: new GraphQLNonNull(GraphQLString) },
     body: { type: GraphQLString },
-    author: {
-      type: AuthorType,
+    user: {
+      type: UserType,
       resolve: (root) => {
-        return require('../mockdata').authors.find(a => a.id === root.author_id)
+        console.log(++counter)
+        return axios.get('https://jsonplaceholder.typicode.com/users/'+root.userId)
+          .then(r => r.data)
       }
     }
   })
