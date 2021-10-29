@@ -18,6 +18,7 @@ const typeDefs = gql`
     # case, the "books" query returns an array of zero or more Books (defined above).
     type Query {
         books: [Book]
+        book: Book
     }
 
     type Subscription {
@@ -41,6 +42,9 @@ const books = [
 const resolvers = {
   Query: {
     books: () => books,
+    book: () => {
+      throw new Error("no book")
+    }
   },
   Subscription: {
     newBook: {
@@ -50,7 +54,6 @@ const resolvers = {
 }
 
 setInterval(() => {
-  console.log('trigger')
   pubsub.publish('NEW_BOOK', {
     newBook: {
       title: 'Book new',
