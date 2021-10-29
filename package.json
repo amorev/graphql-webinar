@@ -18,13 +18,16 @@
   },
   "homepage": "https://github.com/amorev/graphql-webinar#readme",
   "dependencies": {
-    "apollo-server": "3.4.0",
+    "@graphql-tools/schema": "8.3.1",
+    "apollo-server": "^2.25.2",
     "axios": "0.24.0",
     "dataloader": "2.0.0",
     "express": "4.17.1",
     "express-graphql": "0.12.0",
     "graphql": "15.5.1",
+    "http": "0.0.1-security",
     "nodemon": "2.0.12",
-    "pg": "8.7.1"
+    "pg": "8.7.1",
+    "subscriptions-transport-ws": "0.9.19"
   }
 }
